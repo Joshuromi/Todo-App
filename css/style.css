@@ -157,6 +157,7 @@ input:focus, button:focus {
 
 .todo-list-section p {
     flex-grow: 1;
+    font-size: 14px;
 }
 
 .todo-list-section i {
