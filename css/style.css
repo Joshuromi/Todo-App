@@ -118,7 +118,7 @@ input:focus, button:focus {
 }
 
 .todo-section input{
-    padding: .3em;
+    padding: .5em;
     flex-grow: 1;
     border-radius: 20px;
 }
