@@ -10,6 +10,7 @@ body {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
     background-blend-mode: soft-light,screen;
     line-height: 1.6;
+    letter-spacing: 1px;
 }
 
 ul {
@@ -31,7 +32,6 @@ button, i {
     border: none;
     color: #fff;
     cursor: pointer;
-    letter-spacing: 1px;
 }
 
 button:hover, i:hover {
@@ -99,10 +99,6 @@ input:focus, button:focus {
     flex-wrap: wrap;
     padding: 1em 1em 2em;
     border-bottom: 1px solid #aaa;
-}
-
-.date {
-    letter-spacing: 1px;
 }
 
 /**********todo section******************/
