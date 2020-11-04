@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <script src="https://kit.fontawesome.com/e9d1a3075a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1 class="main-header-title">Todo List App</h1>
+        </header>
+        <main class="todo-body">
+            <section class="top-section">
+                <div class="date"><span><strong></strong>Date: </span><span id="current-date"></span></div>
+                <div class="top-buttons">
+                    <!-- <button type="button" id="create">Create new todo <i class="fas fa-folder-plus"></i></button> -->
+                    <button type="button" id="reset"><i class="fas fa-power-off">Reset todo</i></button>
+                </div>
+            </section>
+            <section class="todo-section">
+                <form action="#" id="form" class="active">
+                    <input type="text" id="list-item" placeholder="Add item to list...">
+                    <button type="submit" id="submit"><i class="fas fa-sign-in-alt"></i></button>
+                </form>
+            </section>
+            <section class="todo-list-section">
+                <ul id="todo-list"></ul>
+            </section>
+            <section class="footer">
+                <p>Copyright: joromidev&copy; 2020 </p>
+            </section>
+        </main>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
