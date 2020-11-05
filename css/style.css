@@ -16,7 +16,206 @@ body {
 ul {
     list-style: none;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #dcd9d4;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: .5em;
+    border-bottom: 1px solid #aaa;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button, i {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover, i:hover {
+    color: #fa4b4b;
+}
+
+input {
+    border: none;
+}
+
+input:focus, button:focus {
+    outline: 1px solid rgba(0,0,0,0.40);
+}
+
+.container {
+    background-color: #fff;
+    margin: .3% auto;
+    width: 98%;
+    max-width: 1000px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.main-header {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;    
+    color: #fff;
+    font-family: 'Headland One', sans-serif;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1.2em;
+    text-transform: uppercase;
+}
+
+.main-header-title {
+    font-size: 1.5em;
+}
+
+.todo-body {
+    background: url('../images/work-desk.jpg'), #989898;
+    color: #fff;
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    
+    grid-template-areas: "top top"
+                        "left right"
+                        "bottom bottom";
+    padding: 2em;
+}
+
+/****************top section***************/
+
+.top-section {
+    grid-area: top;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1em 1em 2em;
+    border-bottom: 1px solid #aaa;
+}
+
+/**********todo section******************/
+
+.todo-section {
+    grid-area: left;
+    border-right: 1px solid #aaa;
+}
+
+.todo-section form {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.todo-section input{
+    padding: .5em;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.todo-section i {
+    font-size: 16px;
+    margin-left: 1em;
+}
+
+.todo-section i:hover {
+    color: #000;
+    /* color: #ffa07a; */
+}
+
+/*********todo list section*****************/
+
+.todo-list-section {
+    grid-area: right;
+}
+
+.todo-list-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: .5em;
+}
+
+.todo-list-section li:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.todo-list-section input {
+    margin: 1em;
+}
+
+.todo-list-section p {
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.todo-list-section i {
+    margin: 1em;
+    
+}
+
+.footer {
+    grid-area: bottom;
+    margin-top: 2em;
+    text-align: center;
+    font-size: .8em;
+}
+
+.crossed p{
+    text-decoration: line-through;
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    .todo-body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "top"
+                            "left"
+                            "right"
+                            "bottom";
+    }
+
+    .todo-section {
+        border-right: none;
+    }
+
+    .top-section {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .top-section button {
+        margin-top: 1em;
+    }
+}
 li {
     padding: .5em;
     border-bottom: 1px solid #aaa;
