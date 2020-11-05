@@ -35,12 +35,12 @@ const addListItem = (event) => {
 const todoListEvents = (event) => {
     const li = event.target.parentElement;
 
-    if(event.target.classList.contains('check') && event.target.checked) {
+    if(event.target.classList.contains('check') && event.target.checked == true) {
         li.classList.add("crossed");
-        event.target.checked = true;
-    } else {
+    }
+    
+    if (event.target.classList.contains('check') && event.target.checked == false) {
         li.classList.remove('crossed');
-        event.target.unchecked = true;
     }
 
     if(event.target.classList.contains('fas')) {
